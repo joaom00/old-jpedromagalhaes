@@ -123,7 +123,7 @@ export default function Home() {
           duration: 0.5
         }}
       >
-        <Image src={`/${imageSrc}.jpg`} width={218} height={151} quality={100} />
+        <Image priority src={`/${imageSrc}.jpg`} width={218} height={151} quality={100} />
       </motion.div>
 
       <Header />

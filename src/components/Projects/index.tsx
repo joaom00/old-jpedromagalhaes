@@ -47,6 +47,7 @@ export function Projects({ mouseEnter, mouseLeave }) {
                   src={project.src}
                   width={584}
                   height={405}
+                  priority
                   onMouseEnter={mouseEnter}
                   onMouseLeave={mouseLeave}
                   quality={100}
