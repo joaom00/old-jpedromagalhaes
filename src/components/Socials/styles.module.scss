@@ -1,0 +1,64 @@
+.box {
+  filter: url(#gooey-effect);
+  position: fixed;
+  bottom: 32px;
+  right: -108px;
+
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.addButton {
+  z-index: 20;
+  button {
+    z-index: 21;
+    background: #4e4b66;
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.socials {
+  display: flex;
+  flex-direction: column-reverse;
+  z-index: 10;
+  position: relative;
+}
+
+.selector {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.github {
+  background-color: #333333;
+  z-index: 10;
+  opacity: 1;
+  top: 33px;
+}
+
+.linkedin {
+  background-color: #0077b5;
+  z-index: 9;
+  top: 65px;
+}
+
+.twitter {
+  background-color: #1da1f2;
+  z-index: 8;
+  top: 97px;
+}

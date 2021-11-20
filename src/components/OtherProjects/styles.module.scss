@@ -1,0 +1,49 @@
+.box {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 200px;
+
+  h2 {
+    font-size: 224px;
+    font-weight: bold;
+    color: #e7e8ee;
+  }
+}
+
+.projectsList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 80px;
+  margin-top: 64px;
+}
+
+.project {
+  position: relative;
+  z-index: 110;
+  p {
+    color: #14142a;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+      content: '';
+      width: 96px;
+      height: 1px;
+      display: inline-block;
+      background-color: #14142a;
+    }
+  }
+}
+
+.floatingImage {
+  position: absolute;
+  pointer-events: none;
+  right: 0;
+  left: 0;
+  z-index: 99;
+}
