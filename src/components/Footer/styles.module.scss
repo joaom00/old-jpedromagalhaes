@@ -1,21 +1,10 @@
-.sectionBox {
-  margin: 152px 0;
-  text-align: center;
-
-  span {
-    font-size: 6.4rem;
-    font-weight: bold;
-    cursor: pointer;
-  }
-}
-
 .box {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  margin-top: 104px;
   border-top: 1px solid #d9dbe9;
-  padding-top: 64px;
-  padding-bottom: 104px;
+  padding: 56px 0;
 
   text-align: center;
 }

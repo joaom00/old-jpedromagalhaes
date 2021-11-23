@@ -1,37 +1,24 @@
 import Image from 'next/image'
 
-import { Parallax } from 'components/Parallax'
+import { useMouse } from 'contexts'
+
+import { Parallax } from 'components'
 
 import styles from './styles.module.scss'
 
-const projects = [
-  {
-    id: 1,
-    src: '/dogs.jpg',
-    link: 'https://github.com/joaom00/dogs',
-    gridArea: 'project1'
-  },
-  {
-    id: 2,
-    src: '/moveit.jpg',
-    link: 'https://github.com/joaom00/moveit',
-    gridArea: 'project2'
-  },
-  {
-    id: 3,
-    src: '/50p50d.jpg',
-    link: 'https://github.com/joaom00/50Projects50Days',
-    gridArea: 'project3'
-  },
-  {
-    id: 4,
-    src: '/rock-paper-scissors.jpg',
-    link: 'https://github.com/joaom00/rock-paper-scissors',
-    gridArea: 'project4'
-  }
-]
+import config from 'config'
 
-export function Projects({ mouseEnter, mouseLeave }) {
+const projects = config.get('projects')
+
+type Project = {
+  id: number
+  src: string
+  link: string
+  gridArea: string
+}
+
+export function Projects() {
+  const { projectEnter, projectLeave } = useMouse()
   return (
     <>
       <section className={styles.box}>
@@ -40,16 +27,17 @@ export function Projects({ mouseEnter, mouseLeave }) {
         </Parallax>
 
         <div className={styles.projectsBox}>
-          {projects.map((project) => (
+          {projects.map((project: Project) => (
             <Parallax key={project.id} gridArea={project.gridArea}>
               <a href={project.link} target="_blank" rel="noreferrer noopener">
                 <Image
                   src={project.src}
+                  alt=""
                   width={584}
                   height={405}
                   priority
-                  onMouseEnter={mouseEnter}
-                  onMouseLeave={mouseLeave}
+                  onMouseEnter={projectEnter}
+                  onMouseLeave={projectLeave}
                   quality={100}
                 />
               </a>

@@ -1,0 +1,126 @@
+.box {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 104px;
+}
+
+.subtitle {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #a0a3bd;
+  letter-spacing: 3px;
+  display: block;
+}
+
+.description {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 38px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 200px;
+
+  h3 {
+    font-size: 7.2rem;
+    font-weight: 700;
+  }
+
+  ul {
+    margin-top: 40px;
+  }
+
+  li {
+    width: 80%;
+    padding-left: 16px;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #a0a3bd;
+  }
+
+  span {
+    color: #a0a3bd;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 2.4rem;
+    margin-top: 8px;
+  }
+}
+
+.right {
+  padding-top: 64px;
+}
+
+.listeningHeading {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.icon {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 32px;
+  height: 32px;
+
+  span {
+    width: 6px;
+    height: 100%;
+    background-color: #5f2eea;
+    border-radius: 3px;
+    transform-origin: bottom;
+    content: '';
+  }
+}
+
+.spotifyBox {
+  display: grid;
+  grid-template-areas: 'spotifyIcon title' 'spotifyIcon subtitle';
+  grid-template-columns: 48px 1fr;
+  grid-column-gap: 16px;
+  margin-top: 32px;
+  margin-left: 64px;
+  width: 300px;
+
+  a {
+    grid-area: spotifyIcon;
+  }
+
+  p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1.6rem;
+    grid-area: title;
+    margin-top: 0;
+  }
+
+  span {
+    color: #a0a3bd;
+    font-size: 1.4rem;
+    letter-spacing: 0;
+    text-transform: none;
+    grid-area: subtitle;
+  }
+}
+
+.topTracks {
+  margin-top: 80px;
+}
+
+.feTools {
+  margin-top: 80px;
+}

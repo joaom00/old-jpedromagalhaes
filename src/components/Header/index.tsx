@@ -1,9 +1,11 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 
 import styles from './styles.module.scss'
 
 export function Header() {
+  const router = useRouter()
   return (
     <motion.header
       className={styles.headerBox}
@@ -14,13 +16,17 @@ export function Header() {
       <nav>
         <ul>
           <li>
-            <a href="/">início</a>
+            <Link href="/">
+              <a className={router.pathname === '/' ? styles.active : ''}>INÍCIO</a>
+            </Link>
           </li>
           <li>
-            <a href="#projetos">projetos</a>
+            <a href="/#projetos">PROJETOS</a>
           </li>
           <li>
-            <Link href="/sobre">sobre</Link>
+            <Link href="/sobre">
+              <a className={router.pathname === '/sobre' ? styles.active : ''}>SOBRE MIM</a>
+            </Link>
           </li>
         </ul>
       </nav>

@@ -23,9 +23,9 @@ export function Banner() {
     <main className={styles.box}>
       <motion.h2
         className={styles.name}
-        initial={{ translateX: 100, opacity: 0 }}
-        animate={{ translateX: 0, opacity: 1 }}
-        transition={{ ...transition, delay: 1.6 }}
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ ...transition, delay: 1.2 }}
       >
         João Pedro Magalhães
       </motion.h2>
@@ -36,7 +36,7 @@ export function Banner() {
           animate="animate"
           transition={{ ...transition, delay: 0.6 }}
         >
-          Front-End developer
+          Front End developer
         </motion.span>
       </div>
       <div className={styles.line}>
@@ -46,7 +46,7 @@ export function Banner() {
           animate="animate"
           transition={{ ...transition, delay: 0.7 }}
         >
-          UI-UX enthusiastic
+          UI/UX enthusiastic
         </motion.span>
       </div>
       <div className={styles.line}>
