@@ -7,12 +7,13 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  z-index: 999999999999;
 }
 
 .addButton {
-  z-index: 20;
+  z-index: 99999999999;
   button {
-    z-index: 21;
+    z-index: 99999999999;
     background: #5f2eea;
     position: relative;
 

@@ -20,7 +20,7 @@ const transition = {
 
 export function Banner() {
   return (
-    <main className={styles.box}>
+    <main className={`container ${styles.bannerContainer}`}>
       <motion.h2
         className={styles.name}
         initial={{ x: 100, opacity: 0 }}

@@ -1,7 +1,4 @@
-.box {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+.bannerContainer {
   margin-top: 130px;
 }
 
@@ -9,6 +6,10 @@
   font-size: 2.4rem;
   font-weight: 300;
   letter-spacing: -1px;
+
+  @media screen and (max-width: 640px) {
+    font-size: 1.8rem;
+  }
 }
 
 .line {
@@ -16,12 +17,36 @@
   overflow: hidden;
   height: 113px;
 
+  @media screen and (max-width: 768px) {
+    height: 74px;
+  }
+
+  @media screen and (max-width: 640px) {
+    height: 47px;
+  }
+
   &:nth-child(3) {
     margin-left: 300px;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 100px;
+    }
+
+    @media screen and (max-width: 640px) {
+      margin-left: 64px;
+    }
   }
 
   &:nth-child(4) {
     margin-left: 600px;
+
+    @media screen and (max-width: 768px) {
+      margin-left: 350px;
+    }
+
+    @media screen and (max-width: 640px) {
+      margin-left: 164px;
+    }
   }
 
   span {
@@ -29,6 +54,14 @@
     font-weight: 400;
     letter-spacing: -3px;
     position: absolute;
+
+    @media screen and (max-width: 768px) {
+      font-size: 7.2rem;
+    }
+
+    @media screen and (max-width: 640px) {
+      font-size: 4rem;
+    }
   }
 
   span:nth-child(2) {

@@ -1,5 +1,4 @@
 import { useMouse } from 'contexts'
-
 import { Parallax } from 'components'
 
 import styles from './styles.module.scss'
@@ -18,7 +17,7 @@ type Project = {
 export function OtherProjects() {
   const { otherProjectEnter, otherProjectLeave } = useMouse()
   return (
-    <section className={styles.box}>
+    <section className={`container ${styles.otherProjectsContainer}`}>
       <Parallax offset={100}>
         <h2>OUTROS PROJETOS</h2>
       </Parallax>

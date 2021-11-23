@@ -12,11 +12,13 @@ export function Home() {
       <Projects />
       <OtherProjects />
       <section className={styles.sectionBox}>
-        <Link href="/sobre">
-          <motion.a initial={{ color: '#e7e8ee' }} whileHover={{ color: '#14142b' }}>
-            <Parallax>Saiba mais sobre mim</Parallax>
-          </motion.a>
-        </Link>
+        <Parallax>
+          <Link href="/sobre" passHref>
+            <motion.a initial={{ color: '#e7e8ee' }} whileHover={{ color: '#14142b' }}>
+              Saiba mais sobre mim
+            </motion.a>
+          </Link>
+        </Parallax>
       </section>
     </>
   )

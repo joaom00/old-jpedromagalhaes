@@ -8,7 +8,7 @@ export function Header() {
   const router = useRouter()
   return (
     <motion.header
-      className={styles.headerBox}
+      className={`container ${styles.headerContainer}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1.6, duration: 0.8 }}
@@ -21,7 +21,9 @@ export function Header() {
             </Link>
           </li>
           <li>
-            <a href="/#projetos">PROJETOS</a>
+            <Link href="/#projetos">
+              <a>PROJETOS</a>
+            </Link>
           </li>
           <li>
             <Link href="/sobre">

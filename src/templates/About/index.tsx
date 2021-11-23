@@ -1,6 +1,8 @@
 import { Parallax } from 'components'
 import { motion, Variants } from 'framer-motion'
 
+import { SpotifyIcon } from 'icons'
+
 import styles from './styles.module.scss'
 
 import config from 'config'
@@ -53,7 +55,7 @@ const item: Variants = {
 
 export function About({ nowPlaying, topTracks }: AboutProps) {
   return (
-    <section className={styles.box}>
+    <section className={`container ${styles.aboutContainer}`}>
       <span className={styles.subtitle}>algumas palavras sobre mim</span>
       <p className={styles.description}>
         Desenvolvedor Front End que gosta de UI/UX design e às vezes brincar um pouco no backend, principalmente com Go.
@@ -63,47 +65,45 @@ export function About({ nowPlaying, topTracks }: AboutProps) {
 
       <Parallax>
         <div className={styles.lists}>
-          <div className={styles.left}>
-            <div>
-              <h3>Ferramentas</h3>
-              <ToolsList />
+          <div className={styles.tools}>
+            <h3>Ferramentas</h3>
+            <ToolsList />
+          </div>
+
+          <div className={styles.feTools} style={{ gridArea: 'feTools' }}>
+            <h3>Ferramentas Front End</h3>
+            <FEToolsList />
+          </div>
+
+          <div style={{ gridArea: 'spotify' }}>
+            <div className={styles.listeningHeading}>
+              <h3>Ouvindo</h3>
+              {nowPlaying?.isPlaying && (
+                <motion.div className={styles.icon} variants={container} animate="animate">
+                  <motion.span variants={item} />
+                  <motion.span variants={item} />
+                  <motion.span variants={item} />
+                </motion.div>
+              )}
             </div>
-            <div className={styles.feTools}>
-              <h3>Ferramentas FE</h3>
-              <FEToolsList />
+            <div className={styles.spotifyBox}>
+              <a href={nowPlaying?.songUrl} target="_blank" rel="noreferrer noopener">
+                <SpotifyIcon />
+              </a>
+              {nowPlaying?.isPlaying ? (
+                <>
+                  <p>{nowPlaying?.title}</p>
+                  <span>{nowPlaying?.artist}</span>
+                </>
+              ) : (
+                <p>Não está tocando</p>
+              )}
             </div>
           </div>
 
-          <div className={styles.right}>
-            <div>
-              <div className={styles.listeningHeading}>
-                <h3>Ouvindo</h3>
-                {nowPlaying?.isPlaying && (
-                  <motion.div className={styles.icon} variants={container} animate="animate">
-                    <motion.span variants={item} />
-                    <motion.span variants={item} />
-                    <motion.span variants={item} />
-                  </motion.div>
-                )}
-              </div>
-              <div className={styles.spotifyBox}>
-                <a href={nowPlaying?.songUrl} target="_blank" rel="noreferrer noopener">
-                  <img src="/spotify.svg" alt="" />
-                </a>
-                {nowPlaying?.isPlaying ? (
-                  <>
-                    <p>{nowPlaying?.title}</p>
-                    <span>{nowPlaying?.artist}</span>
-                  </>
-                ) : (
-                  <p>Não está tocando</p>
-                )}
-              </div>
-            </div>
-            <div className={styles.topTracks}>
-              <h3>Mais ouvidas</h3>
-              <TopTracks topTracks={topTracks} />
-            </div>
+          <div className={styles.topTracks}>
+            <h3>Mais ouvidas</h3>
+            <TopTracks topTracks={topTracks} />
           </div>
         </div>
       </Parallax>

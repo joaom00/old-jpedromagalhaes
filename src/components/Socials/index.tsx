@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, Variants } from 'framer-motion'
-import { HiOutlineChevronDown } from 'react-icons/hi'
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+
+import { HiOutlineChevronDown, FaGithub, FaLinkedin, FaTwitter } from 'icons'
 
 import styles from './styles.module.scss'
 

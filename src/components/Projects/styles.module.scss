@@ -1,24 +1,86 @@
-.box {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+.projectsContainer {
   margin-top: 200px;
+  @media screen and (max-width: 768px) {
+    margin-top: 100px;
+  }
 
   h2 {
     font-size: 21rem;
     font-weight: bold;
-    color: #e7e8ee;
+    color: var(--heading);
+
+    @media screen and (max-width: 768px) {
+      font-size: 13rem;
+    }
+
+    @media screen and (max-width: 640px) {
+      font-size: 6.4rem;
+    }
   }
 }
 
 .projectsBox {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: 'project1 a' 'b project2' 'project3 c' 'd project4';
+  grid-column-gap: 32px;
   grid-row-gap: 100px;
   margin-top: 80px;
 
   img:hover {
     cursor: none;
+  }
+
+  @media screen and (max-width: 640px) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 40px;
+  }
+}
+
+.cardOverlay {
+  z-index: 99;
+  position: fixed;
+  background: rgba(20, 20, 43, 0.7);
+  will-change: opacity;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cardContentBox {
+  background-color: var(--white);
+}
+
+.cardContent {
+  width: 100%;
+  text-align: center;
+  padding: 16px 0 32px 0;
+  max-width: 570px;
+  margin: 0 auto;
+
+  p {
+    margin-bottom: 32px;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+
+  a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+
+  a + a {
+    margin-left: 16px;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 }

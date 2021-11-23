@@ -6,10 +6,9 @@ import { useIsomorphicLayoutEffect } from 'hooks'
 type ParallaxProps = {
   children: ReactNode
   offset?: number
-  gridArea?: string
 }
 
-export function Parallax({ children, offset = 50, gridArea = '' }: ParallaxProps) {
+export function Parallax({ children, offset = 50 }: ParallaxProps) {
   const prefersReducedMotion = useReducedMotion()
   const [elementTop, setElementTop] = useState(0)
   const [clientHeight, setClientHeight] = useState(0)
@@ -34,13 +33,12 @@ export function Parallax({ children, offset = 50, gridArea = '' }: ParallaxProps
     return () => window.removeEventListener('resize', onResize)
   }, [ref])
 
-  // Don't parallax if the user has "reduced motion" enabled
   if (prefersReducedMotion) {
     return <>{children}</>
   }
 
   return (
-    <motion.div ref={ref} style={{ y, gridArea }}>
+    <motion.div ref={ref} style={{ y }}>
       {children}
     </motion.div>
   )

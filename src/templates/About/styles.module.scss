@@ -1,7 +1,4 @@
-.box {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+.aboutContainer {
   margin-top: 104px;
 }
 
@@ -9,9 +6,12 @@
   text-align: center;
   font-weight: 300;
   text-transform: uppercase;
-  color: #a0a3bd;
+  color: var(--line);
   letter-spacing: 3px;
   display: block;
+  @media screen and (max-width: 768px) {
+    font-size: 1.4rem;
+  }
 }
 
 .description {
@@ -22,16 +22,28 @@
   max-width: 800px;
   margin: 0 auto;
   margin-top: 40px;
+  @media screen and (max-width: 768px) {
+    font-size: 1.8rem;
+  }
 }
 
 .lists {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'tools spotify' 'feTools topTracks';
   margin-top: 200px;
+
+  @media screen and (max-width: 640px) {
+    margin-top: 100px;
+    grid-template-areas: 'spotify' 'tools' 'topTracks' 'feTools';
+  }
 
   h3 {
     font-size: 7.2rem;
     font-weight: 700;
+    @media screen and (max-width: 768px) {
+      font-size: 5.6rem;
+    }
   }
 
   ul {
@@ -43,11 +55,11 @@
     padding-left: 16px;
     padding-bottom: 24px;
     margin-bottom: 24px;
-    border-bottom: 1px solid #a0a3bd;
+    border-bottom: 1px solid var(--line);
   }
 
   span {
-    color: #a0a3bd;
+    color: var(--line);
     letter-spacing: 2px;
     font-weight: 300;
     text-transform: uppercase;
@@ -57,10 +69,6 @@
     font-size: 2.4rem;
     margin-top: 8px;
   }
-}
-
-.right {
-  padding-top: 64px;
 }
 
 .listeningHeading {
@@ -79,7 +87,7 @@
   span {
     width: 6px;
     height: 100%;
-    background-color: #5f2eea;
+    background-color: var(--purple);
     border-radius: 3px;
     transform-origin: bottom;
     content: '';
@@ -109,7 +117,7 @@
   }
 
   span {
-    color: #a0a3bd;
+    color: var(--line);
     font-size: 1.4rem;
     letter-spacing: 0;
     text-transform: none;
@@ -117,8 +125,24 @@
   }
 }
 
-.topTracks {
+.tools {
+  grid-area: tools;
   margin-top: 80px;
+}
+
+.topTracks {
+  grid-area: topTracks;
+  grid-row-start: 1;
+  margin-top: 300px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 250px;
+  }
+
+  @media screen and (max-width: 640px) {
+    margin-top: 80px;
+    grid-row-start: initial;
+  }
 }
 
 .feTools {

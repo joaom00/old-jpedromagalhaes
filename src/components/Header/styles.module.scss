@@ -1,7 +1,4 @@
-.headerBox {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+.headerContainer {
   padding-top: 42px;
 
   ul {
@@ -15,6 +12,9 @@
     li:nth-child(2) {
       margin-left: auto;
       margin-right: 104px;
+      @media screen and (max-width: 768px) {
+        margin-right: 64px;
+      }
     }
   }
 }
@@ -30,6 +30,6 @@
     width: 8px;
     height: 8px;
     border-radius: 100%;
-    background-color: #5f2eea;
+    background-color: var(--purple);
   }
 }

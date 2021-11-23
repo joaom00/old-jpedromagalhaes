@@ -1,9 +1,7 @@
 import Image from 'next/image'
 import { AnimateSharedLayout, motion, Variants } from 'framer-motion'
-import { HiOutlineExternalLink } from 'react-icons/hi'
 
 import { useMouse } from 'contexts'
-
 import { Header, Footer, Socials } from 'components'
 
 import styles from './styles.module.scss'
@@ -62,29 +60,28 @@ export function Layout({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div ref={ref}>
-      <motion.div className={styles.circle} variants={projectVariants} animate={cursorVariant} transition={spring}>
-        <span className={styles.cursorText}>
-          {cursorText}
-          {!!cursorText && <HiOutlineExternalLink color="#14142b" />}
-        </span>
-      </motion.div>
+    <AnimateSharedLayout>
+      <div ref={ref}>
+        <motion.div className={styles.circle} variants={projectVariants} animate={cursorVariant} transition={spring}>
+          <span className={styles.cursorText}>{cursorText}</span>
+        </motion.div>
 
-      <motion.div
-        className={styles.project}
-        variants={otherProjectVariants}
-        animate={projectCursorVariant}
-        transition={{
-          ease: [0.13, 0.94, 0.33, 1.05],
-          duration: 0.5
-        }}
-      >
-        <Image priority src={`/${imageSrc}.jpg`} width={218} height={151} quality={100} alt="" />
-      </motion.div>
-      <Socials />
-      <Header />
-      {children}
-      <Footer />
-    </div>
+        <motion.div
+          className={styles.project}
+          variants={otherProjectVariants}
+          animate={projectCursorVariant}
+          transition={{
+            ease: [0.13, 0.94, 0.33, 1.05],
+            duration: 0.5
+          }}
+        >
+          <Image priority src={`/${imageSrc}.jpg`} width={218} height={151} quality={100} alt="" />
+        </motion.div>
+        <Socials />
+        <Header />
+        {children}
+        <Footer />
+      </div>
+    </AnimateSharedLayout>
   )
 }

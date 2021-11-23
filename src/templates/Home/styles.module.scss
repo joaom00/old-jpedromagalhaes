@@ -6,6 +6,8 @@
   a {
     font-size: 6.4rem;
     font-weight: bold;
-    cursor: pointer;
+    @media screen and (max-width: 768px) {
+      font-size: 5.6rem;
+    }
   }
 }
