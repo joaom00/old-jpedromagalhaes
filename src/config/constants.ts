@@ -5,14 +5,14 @@ export const projects = [
       'Dogs é um instagram para cachorros onde o usuário pode publicar uma foto, comentar, curtir e seguir outros usuários.',
     imageSrc: '/dogs.jpg',
     repoURL: 'https://github.com/joaom00/dogs',
-    livePreviewURL: ''
+    livePreviewURL: 'https://dogs-ten.vercel.app/'
   },
   {
     id: 2,
     description: 'Seja produtivo e ganhe XP. Pomodoro feito somente com HTML, CSS e JavaScript',
     imageSrc: '/moveit.jpg',
     repoURL: 'https://github.com/joaom00/moveit',
-    livePreviewURL: ''
+    livePreviewURL: 'https://joaom00.github.io/moveit/'
   },
   {
     id: 3,
