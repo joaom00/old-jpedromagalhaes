@@ -75,7 +75,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             duration: 0.5
           }}
         >
-          <Image priority src={`/${imageSrc}.jpg`} width={218} height={151} quality={100} alt="" />
+          <img style={{ width: '218px', height: '151px' }} src={`/${imageSrc}.jpg`} alt="" />
         </motion.div>
         <Socials />
         <Header />
