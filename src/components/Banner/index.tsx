@@ -46,7 +46,7 @@ export function Banner() {
           animate="animate"
           transition={{ ...transition, delay: 0.7 }}
         >
-          UI/UX enthusiastic
+          UI/UX enthusiast
         </motion.span>
       </div>
       <div className={styles.line}>
