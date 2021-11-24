@@ -24,6 +24,7 @@ export function Parallax({ children, offset = 50 }: ParallaxProps) {
 
   useIsomorphicLayoutEffect(() => {
     const element = ref.current
+    if (!ref.current) return
     const onResize = () => {
       setElementTop(element.getBoundingClientRect().top + window.scrollY || window.pageYOffset)
       setClientHeight(window.innerHeight)
