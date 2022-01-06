@@ -1,5 +1,7 @@
 ## [Vejo o site agora](https://jpedromagalhaes.vercel.app)
 
+![Preview](.github/portfolio.png)
+
 ## 📦 Tecnologias
 
 - [NextJS](https://reactjs.org)
