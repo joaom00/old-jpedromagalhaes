@@ -19,7 +19,7 @@
     "sass": "^1.51.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.26",
+    "@types/node": "^17.0.31",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^18.0.8",
     "eslint": "<9.0.0",
