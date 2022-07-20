@@ -107,9 +107,11 @@ function Modal({ projectId, setProjectId }) {
             <a href={project.repoURL} target="_blank" rel="noreferrer noopener">
               GitHub <FaGithub color="#14142b" />
             </a>
-            <a href={project.livePreviewURL} target="_blank" rel="noreferrer noopener">
-              Site <HiOutlineExternalLink color="#14142b" />
-            </a>
+            {project.livePreviewURL && (
+              <a href={project.livePreviewURL} target="_blank" rel="noreferrer noopener">
+                Site <HiOutlineExternalLink color="#14142b" />
+              </a>
+            )}
           </motion.div>
         </div>
       </motion.div>
