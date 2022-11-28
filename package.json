@@ -23,7 +23,7 @@
     "@types/nprogress": "^0.2.0",
     "@types/react": "^18.0.25",
     "eslint": "<9.0.0",
-    "eslint-config-next": "13.0.4",
+    "eslint-config-next": "13.0.5",
     "prettier": "^2.4.1",
     "typescript": "^4.9.3"
   },
