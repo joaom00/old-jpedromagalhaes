@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@react-hook/mouse-position": "^4.1.3",
-    "framer-motion": "^7.10.2",
+    "framer-motion": "^8.0.2",
     "next": "13.0.7",
     "nprogress": "^0.2.0",
     "preact": "^10.11.3",
