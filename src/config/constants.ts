@@ -4,8 +4,7 @@ export const projects = [
     description:
       'Dogs é um instagram para cachorros onde o usuário pode publicar uma foto, comentar, curtir e seguir outros usuários.',
     imageSrc: '/dogs.jpg',
-    repoURL: 'https://github.com/joaom00/dogs',
-    livePreviewURL: 'https://dogs-ten.vercel.app/'
+    repoURL: 'https://github.com/joaom00/dogs'
   },
   {
     id: 2,
